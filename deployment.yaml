@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: deployement
+metadata:
+  name: mi-servidor
+
+spec:
+  replicas: 3
+  selector:
+    matchlabels:
+      app: mi-servidor
+
+  templates:
+    metadata:
+      labels:
+        app: mi-servidor
+
+  spec:
+    containers:
+      - name: mi-servidor
+        image: mi-servidor-node
+        ports:
+          - containersPorts: 3000
