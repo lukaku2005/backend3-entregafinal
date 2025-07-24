@@ -32,5 +32,14 @@ la API va a estar corriendo en http://localhost:3000
 
 
 
+Imagen en Docker Hub
+La imagen está publicada y disponible públicamente en Docker Hub:
 
+https://hub.docker.com/r/lukaku05/backend2-entrega1
 
+Para descargar y ejecutar directamente la imagen sin build:
+
+docker pull lukaku05/backend2-entrega1:latest
+docker run -p 3000:3000 lukaku05/backend2-entrega1:latest
+
+¡Gracias por usar este proyecto!
