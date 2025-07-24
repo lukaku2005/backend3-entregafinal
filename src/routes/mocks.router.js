@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { generatePet } from '../utils/mockingpets.js';
-import { generateUsers } from '../utils/mockingUsers.js';
-import UserModel from '../dao/models/User.js';
-import PetModel from '../dao/models/Pet.js';
+import { generatePet } from '../utils/mockingpet.js';
+import { generateUsers } from '../utils/mockingUser.js';
+import UserModel from '../dao/models/user.model.js';
+import PetModel from '../dao/models/pet.model.js';
 
 const router = Router();
 

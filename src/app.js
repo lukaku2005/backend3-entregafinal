@@ -1,13 +1,13 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
-import { addLogger } from './middlewares/logger.js';
+import { addLogger } from './middlewars/logger.js';
 
 import mocksRouter from './routes/mocks.router.js';
 import usersRouter from './routes/users.router.js';
 import petsRouter from './routes/pets.router.js';
 import adoptionsRouter from './routes/adoption.router.js';
-import sessionsRouter from './routes/sessions.router.js';
+import sessionRouter from './routes/session.router.js';
 import loggerRouter from './routes/logger.router.js';
 import setupSwagger from './docs/swagger.js';
 
@@ -31,7 +31,7 @@ app.use(addLogger);
 app.use('/api/users', usersRouter);
 app.use('/api/pets', petsRouter);
 app.use('/api/adoption', adoptionsRouter);
-app.use('/api/sessions', sessionsRouter);
+app.use('/api/sessions', sessionRouter);
 app.use('/', loggerRouter);
 app.use('/api/mocks', mocksRouter);
 app.use('/api/docs', swaggerUiExpress.serve, swaggerUiExpress.setup(specs));
